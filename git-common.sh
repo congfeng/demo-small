@@ -1,4 +1,3 @@
-@echo off 
 git pull
 echo 已更新
 git add --all
