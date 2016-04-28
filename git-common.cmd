@@ -1,7 +1,8 @@
 git pull
-echo Е╥╡Ф⌡╢Ф√╟
+echo ря╦Эпб
 git add --all
 git commit -a -m "tj"
-echo Е╥╡Ф▐░Д╨╓Ф°╛Е°╟Д╩⌠Е╨⌠
+echo рялА╫╩╠╬╣ь╡ж©Б
 git push origin master
-echo Е╥╡Ф▐░Д╨╓Х©°Г╗▀Д╩⌠Е╨⌠
+echo рялА╫╩т╤Ёл╡ж©Б
+pause
