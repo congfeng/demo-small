@@ -1,11 +1,10 @@
+@echo off 
 cd ../
-pause
 git pull
-echo 已更新
-pause
+echo pulled
 git add --all
 git commit -a -m "tj"
-echo 已提交本地仓库
+echo commited
 git push origin master
-echo 已提交远程仓库
+echo pushed
 pause
