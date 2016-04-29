@@ -1,9 +1,6 @@
 # demo-small
 
-需要安装的软件：
-   jdk1.6+
-   git
-   maven
+需要安装的软件：jdk1.6+、git、maven
 <hr>1.1. 随便找一个目录（作为项目代码存放的工作目录）
 <br>   例如：E:\work
 <br>1.2. 下载项目代码
