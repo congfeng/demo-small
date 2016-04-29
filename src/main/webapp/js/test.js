@@ -3,7 +3,7 @@ $(function(){
 		type: 'POST',
 		dataType: 'json',
 		url: '/profile/login',
-		data: {username:'丛峰',password:'congfeng'},
+		data: {username:'admin',password:'admin'},
 		success: function(data){
 			console.log(data);
 		}
