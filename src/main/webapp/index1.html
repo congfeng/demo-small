@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0"> 
+  <meta content="yes" name="apple-mobile-web-app-capable">
+  <meta content="black" name="apple-mobile-web-app-status-bar-style">
+  <meta content="telephone=no" name="format-detection">
+  <title>mobile</title>
+<style>
+    *{font-family: "微软雅黑";margin: 0;padding: 0;}
+    html {max-width: 640px; min-width: 320px; width: 100%; height: 100%; margin: 0 auto;background-color: #ebebeb;}
+    .item{background-color: #fff;padding: 1rem 1rem;margin-top: 1rem;box-sizing: border-box;}
+    .item img{width: 100%;}
+    #user{overflow: hidden;}
+    #user div{float: left;}
+    #user span{font-family: "微软雅黑";}
+    #user .user-pic{width: 7.5rem;height: 7.5rem;}
+    #user .user-pic img{width: 100%;}
+    #user .user-name{width: 55%;padding: 0 1rem;box-sizing: border-box;}
+    #user .user-name span{font-size: 1.2rem;display: block;line-height: 2rem;}
+    #user .user-name .number{color: #999;}
+    #user .user-name .number-user{color: #999;display: inline-block;}
+
+    #user .user-er{width: 1.5rem;float: right;/*padding: 0rem 1rem;*/box-sizing: border-box;width: 10%;}
+    .items img{width: 4rem;vertical-align: middle;}
+    .items div{line-height: 4rem;font-size: 1.2rem;font-weight: bold;}
+    .items .btm{border-bottom: 1px solid #ebebeb;}
+</style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="item" id="user">
+           <div class="user-pic"><img src="images/img_01.gif" alt=""></div>
+           <div class="user-name">
+                <span class="name">丛雪</span>
+                <span class="number">微信号：<span class="number-user">123456789</span></span>
+           </div>
+           <div class="user-er"><img src="images/img_02.jpg" alt=""></div>
+        </div>
+        <div class="item items" id="item1">
+           <div class="btm"><img src="images/img_03.gif" alt="">相册</div>
+           <div><img src="images/img_03.gif" alt="">收藏</div>
+        </div>
+        <div class="item items" id="item2">
+           <div class=" btm"><img src="images/img_03.gif" alt="">钱包</div>
+           <div><img src="images/img_03.gif" alt="">卡券</div>
+        </div>
+        <div class="item items" id="item3">
+           <div><img src="images/img_03.gif" alt="">表情</div>
+        </div>
+        <div class="item items" id="item4">
+           <div><img src="images/img_03.gif" alt="">设置</div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="/resources/jquery-1.12.3.min.js"></script>
+<script type="text/javascript">
+$(function(){ 
+        window.onload(function(){
+             var pic = $(".user-pic img").src;
+             var name = $(".name").text;
+             var number = $(".number-user").text;
+             $.ajax({
+                  type: 'POST',
+                  datatype:"json",
+                  url: "profile/info",
+                  // data: {pic:pic,name:name,number:number},
+                  success:function(data){
+                      console.log(data);
+                      if(data.s==0){
+                          alert("失败信息"+data.m);
+                      }else{
+                          // window.location.href="http://www.baidu.com/";
+                      }
+                  }
+             });
+        });
+
+})
+</script>

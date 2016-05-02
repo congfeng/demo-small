@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Document</title>
+  <meta charset="UTF-8">
+  <title>Document</title>
 <style>
     *{font-family: "微软雅黑";}
     div{margin-bottom: 10px;}
@@ -15,11 +15,11 @@
     <form action="" class="box">
          <div class="name">
                <label for="name"></label>
-               姓名：<input type="text">
+               姓名：<input type="text" id="username">
          </div>
          <div class="password">
                <label for="password"></label>
-               密码：<input type="password">
+               密码：<input type="password" id="password">
          </div>
          <input type="button" value="提交" class="btn" id="btn">
     </form>
@@ -28,17 +28,22 @@
 </html>
 <script src="/resources/jquery-1.12.3.min.js"></script>
 <script type="text/javascript">
-$(function(){ 
+$(function(){
         $("#btn").on("click",function(){
+             var username = $("#username").val();
+             var password = $("#password").val();
              $.ajax({
                   type: 'POST',
-                  url: "aaaa.action",
-                  data: "can1=1&can2=2&can3=3",
-                  success:function(msg){
-                      alert("成功了");
-                  },
-                  error:function(){
-                      //window.location.href="http://www.baidu.com/";                
+                  datatype:"json",
+                  url: "profile/login",
+                  data: {username:username,password:password},
+                  success:function(data){
+                      console.log(data);
+                      if(data.s==0){
+                          alert("失败信息"+data.m);
+                      }else{
+                          window.location.href="http://www.baidu.com/";
+                      }
                   }
              });
         });
