@@ -42,4 +42,12 @@ public class ProfileController extends Controller{
 		this.renderJson("s", 1);
 	}
 	
+	public void info(){
+		Map<String,Object> ret = new HashMap<String,Object>();
+		ret.put("userNick", "大风哥");
+		ret.put("userNum", "congfengwx");
+		ret.put("userPortrait", "image/portrait.jpg");
+		this.renderJson(ret);
+	}
+	
 }
