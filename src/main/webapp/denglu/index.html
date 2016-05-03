@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<div class="bg"><img src="images/bg.png"  alt="" class="logo-bg"/>
+      <div class="content">
+             <div class="logo">
+                <a href="http://www.goumin.com/" target="_blank"><img src="images/logo.png" width="297" height="59" alt="" title="狗民网" class="logopic"/>
+                     <h1>狗民网</h1>
+                </a>
+             </div>
+             <div class="center">
+                  <p>
+                      <span><img src="images/pic03.png" alt=""></span> 
+                      <span>H-luther</span><span>，欢迎您通过新浪微博登录狗民网！</span>
+                  </p>
+                  <ul >
+                        <!-- 注册 -->
+                        <li class="left">
+                              <form action="">
+                                  <input type="text" id="name1" placeholder="请输入手机号">
+                                  <input type="password" id="password1" placeholder="请输入验证码">
+                                  <input type="submit" value="完成注册" id="submit1"/ >
+                              </form>
+                        </li>
+                        <!-- 重置 -->
+                        <li class="right">
+                              <form action="">
+                                  <input type="text" id="name2" placeholder="请输入用户名">
+                                  <input type="password" id="password2" placeholder="输入新密码">
+                                  <input type="password" id="password2" placeholder="再次输入新密码">
+                                  <input type="submit" value="完成重置" id="submit2"/ >
+                              </form>
+                        </li>
+                  </ul>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript" src="jquery-1.12.3.min.js"></script>
+</html>
+<script type="text/javascript">
+$(function(){
+        $("#submit1").on("click",function(){
+             var username = $("#name1").val();
+             var password = $("#password1").val();
+             $.ajax({
+                  type: 'POST',
+                  datatype:"json",
+                  url: "user/register",
+                  data: {username:username,password:password},
+                  success:function(data){
+                      console.log(data);
+                      if(data.s==0){
+                          alert("失败信息"+data.m);
+                      }else{
+                          // window.location.href="index1.html";
+                      }
+                  }
+             });
+        });
+
+})
+</script>

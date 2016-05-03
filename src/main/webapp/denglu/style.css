@@ -1,0 +1,50 @@
+@charset "utf-8";
+/* CSS Document */
+
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,button,textarea,blockquote,th,td,p,header,footer,html{margin:0;padding:0;font-weight:normal;}
+input,button,select,textarea{outline:none; vertical-align:middle}
+input::-moz-focus-inner{ border: 0;padding: 0;}
+li{list-style:none}
+img{border:none}
+textarea{resize:none}
+i,em{font-style:normal;}
+body,input,textarea{font-size:12px;font-family:Verdana,Arial}
+  body{font-family:Arial,Tahoma,'SimHei';color:#767676;background:#fff;word-break:break-all;word-wrap:break-word;text-align:center;background-image:url(about:blank);background-attachment:fixed}
+body,html{_width:100%;_overflow-x:hidden;height:100%;}
+
+body{ position:relative;}
+.bg .logo-bg { width:auto; height:auto; margin:center center; }
+.content{ width:986px; height:540px;position:absolute; left:50%; top:50%; margin-left:-493px; margin-top:-270px;}
+.logo{ margin-bottom:30px;}
+.logo h1{ text-indent:-9999px;}
+.center{ height:400px; width:100%; background-color:#ffffff; opacity:0.8;box-sizing:border-box; padding:33px 45px;}
+.center>p{ display:inline-block; width:440px; height:50px;padding-top: 20px;margin:0 auto; line-height:50px; font-family:"SimHei"; font-size:18px; color:#000000; padding-left:30px; }
+.center>p span{display: block;float: left;}
+.center>p span:nth-child(1){width: 50px; height:50px;border-radius: 25px;overflow: hidden;margin-right: 10px;}
+.center>p span:nth-child(1) img{display: block;width: 100%;height: 100%;}
+.content ul {position: relative;}
+.content ul li { padding-top:18px; box-sizing:border-box; }
+
+.left,.right{ width:50%; height:224px;float:left;}
+// .left{ border-right:1px dashed #c9c2c3;margin-top: 30px;}
+// .left button{ width:400px; height:72px;border:0 none; display:inline;background:url(images/pic01.png) 111px center no-repeat #4dd02a; text-indent:50px;}
+// .left button a{font-size:30px; color:#ffffff; line-height:72px; font-family:"SimHei"; text-decoration:none;}
+// .left p{ font-family:"SimHei"; color:#000000; float:right; margin:7px 25px;font-size:18px; line-height:20px;}
+// .right button{ width:400px; height:72px;border:0 none; display:inline;background:url(images/pic02.png) 60px center no-repeat #2da0e2; text-indent:70px;}
+// .right button a{font-size:30px; color:#ffffff; line-height:72px; font-family:"SimHei"; text-decoration:none;}
+// .right p{ font-family:"SimHei"; font-size:18px; line-height:20px;color:#000000; float:right; margin:7px 25px; background:url(images/pic04.png) left top no-repeat; text-indent:25px; height:20px;}
+
+// .other{ width: 430px; height: 265px;position: absolute; right: 8px; top: -42px;}
+#name2,#password2{ width: 320px; height: 43px; border:1px solid #cac6b9;}
+#name2{background:url(images/name.png) no-repeat 25px center; padding-left: 80px;}
+#password2{background:url(images/pass.png) no-repeat 25px center; padding-left: 80px;}
+#password2,#submit2{ margin-top:14px;}
+#submit2{ background-color: #ef7c1a; width: 400px; height: 72px; border:0 none; color: #ffffff; font-family:"SimHei";font-size:30px; cursor: pointer;}#name,#password{ width: 320px; height: 72px; border:1px solid #cac6b9;}
+
+#name1,#password1{ width: 320px; height: 72px; border:1px solid #cac6b9;}
+#name1{background:url(images/name.png) no-repeat 25px center; padding-left: 80px;}
+#password1{background:url(images/pass.png) no-repeat 25px center; padding-left: 80px;}
+#password1,#submit1{ margin-top:14px;}
+#submit1{ background-color: #ef7c1a; width: 400px; height: 72px; border:0 none; color: #ffffff; font-family:"SimHei";font-size:30px; cursor: pointer;}#name,#password{ width: 320px; height: 72px; border:1px solid #cac6b9;}
+
+.center input{font-size: 16px;font-family: "微软雅黑";}

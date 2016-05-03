@@ -58,25 +58,20 @@
 <script src="/resources/jquery-1.12.3.min.js"></script>
 <script type="text/javascript">
 $(function(){ 
-        window.onload(function(){
-             var pic = $(".user-pic img").src;
-             var name = $(".name").text;
-             var number = $(".number-user").text;
              $.ajax({
+             // var pic = $(".user-pic img").src;
+             // var name = $(".name").text;
+             // var number = $(".number-user").text;
+
                   type: 'POST',
                   datatype:"json",
                   url: "profile/info",
-                  // data: {pic:pic,name:name,number:number},
                   success:function(data){
-                      console.log(data);
-                      if(data.s==0){
-                          alert("失败信息"+data.m);
-                      }else{
-                          // window.location.href="http://www.baidu.com/";
-                      }
+                    $(".name").text(data.userNick);
+                    $(".number-user").text(data.userNum);
+                    $(".user-pic img").attr("src",data.userPortrait);
                   }
              });
-        });
 
 })
 </script>
