@@ -33,19 +33,27 @@ public class ProfileController extends Controller{
 			this.renderJson(ret);
 			return ;
 		}
-		if(!(username.equals("admin")&&password.equals("admin"))){
+		String rPassword = UserController.Users.get(username);
+		if(StringUtils.isEmpty(rPassword)){
 			ret.put("s", 0);
-			ret.put("m", "用户名或密码错误");
+			ret.put("m", "用户不存在");
 			this.renderJson(ret);
 			return ;
 		}
+		if(!rPassword.equals(password)){
+			ret.put("s", 0);
+			ret.put("m", "密码错误");
+			this.renderJson(ret);
+			return ;
+		}
+		super.setSessionAttr("username", username);
 		this.renderJson("s", 1);
 	}
 	
 	public void info(){
 		Map<String,Object> ret = new HashMap<String,Object>();
 		ret.put("userNick", "大风哥");
-		ret.put("userNum", "congfengwx");
+		ret.put("userNum", super.getSessionAttr("username"));
 		ret.put("userPortrait", "image/portrait.jpg");
 		this.renderJson(ret);
 	}

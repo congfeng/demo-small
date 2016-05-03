@@ -4,6 +4,8 @@
 package com.cf.code.core;
 
 import com.cf.code.web.ProfileController;
+import com.cf.code.web.TalkController;
+import com.cf.code.web.UserController;
 import com.jfinal.config.Constants;
 import com.jfinal.config.Handlers;
 import com.jfinal.config.Interceptors;
@@ -44,6 +46,8 @@ public class MyAppConfig extends JFinalConfig{
 	@Override
 	public void configRoute(Routes arg0) {
 		arg0.add("/profile", ProfileController.class);
+		arg0.add("/user", UserController.class);
+		arg0.add("/talk", TalkController.class);
 	}
 
 }
